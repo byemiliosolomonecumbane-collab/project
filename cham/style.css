@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', serif;
+}
+
+body {
+    background-color: #e5c08d;
+}
+
+header {
+    background-color: #34495e;
+    color: white;
+    padding: 15px 5%;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.loja-online {
+    display: block;
+    font-weight: bold;
+    font-size: 2.4rem;
+}
+
+.slogan {
+    font-size: 1.9rem;
+    color: #f39c12;
+    font-style: italic;
+}
+
+.main-title {
+    color: #f39c12;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.year-badge .year {
+    font-size: 3rem;
+    color: #f39c12;
+    line-height: 1;
+    display: block;
+    font-weight: bold;
+}
+
+.year-badge .sub-year {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.search-bar-container {
+    background-color: #2c3e50;
+    padding: 12px;
+    margin-top: 15px;
+}
+
+.search-box {
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #bdc3c7;
+    border: 1px solid #7f8c8d;
+}
+
+.label-pesquisa {
+    background: white;
+    padding: 8px 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 8px;
+    outline: none;
+}
+
+.search-btn {
+    background: #f39c12;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.promo-bar {
+    background-color: #f39c12;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #d35400;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 5%;
+}
+
+.card {
+    background: linear-gradient(to bottom, #d4a76a, #f3d4a8);
+    border: 1px solid #2c3e50;
+    display: flex;
+    flex-direction: column;
+    height: 480px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 2.3rem;
+    font-weight: bold;
+}
+
+.card-body {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: white;
+    overflow: hidden;
+}
+
+div {}
+
+.product-img,
+.slide {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    box-shadow: inset;
+}
+
+.slide {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.order-link {
+    text-align: center;
+    padding: 15px;
+    color: #d35400;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.carousel {
+    position: relative;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    display: flex;
+}
+
+.slide {
+    position: relative;
+    width: auto;
+    height: center;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(1.05);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.ken-burns-slider {
+    position: relative;
+    width: center;
+    height: center;
+    overflow: hidden;
+    background-color: #ffffff;
+    object-fit: contain;
+    /* Verifique se o ponto e vírgula está aqui */
+}
+
+.slide {
+    position: absolute;
+    top: auto;
+    left: auto;
+    width: center;
+    height: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.active .slide-img {
+    animation: kenburns-effect 8s ease-in-out infinite alternate;
+}
+
+@keyframes kenburns-effect {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+    50% {
+        transform: scale(1.15) translate(-2%, -1%);
+    }
+}
+
+footer {
+    background: linear-gradient(to bottom, #7f8c8d, #2c3e50);
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+.email-link {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.star-rating {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    margin-top: 1px;
+}
+
+.star {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ccc;
+    transition: 0.2s;
+}
+
+.star.selected {
+    color: #f39c12;
+}
